@@ -1,87 +1,172 @@
-* {
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-.container {
-    width: 80%;
-    max-width: 800px;
-    margin: 50px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
+    background: linear-gradient(120deg, #f6d365, #fda085);
     color: #333;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #444;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
 label {
-    margin-top: 10px;
+    display: block;
     font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
 }
 
-input {
-    padding: 8px;
-    margin-top: 5px;
-    font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 5px #ff8c42;
+    border-color: #ff8c42;
+    outline: none;
 }
 
 button {
-    margin-top: 20px;
+    display: block;
+    width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(120deg, #f093fb, #f5576c);
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.search-container {
-    margin-top: 30px;
+button:active {
+    transform: scale(0.98);
 }
 
-#searchInput {
-    padding: 10px;
-    width: 80%;
+.navigation a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #f093fb;
+    transition: color 0.3s ease;
 }
 
-#searchResult {
-    margin-top: 15px;
+.navigation a:hover {
+    color: #f5576c;
 }
 
+/* Farmer List Styles */
 .farmer-list ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
 }
 
 .farmer-list li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.farmer-list li:hover {
+    background: #fef3c7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Search Result Section */
+#searchResult {
+    margin-top: 15px;
     padding: 10px;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background: #ffedd5;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input {
+    width: calc(100% - 100px);
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.search-container button {
+    width: 90px;
+    display: inline-block;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container button:hover {
+    background: linear-gradient(120deg, #f5576c, #f093fb);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"], button {
+        font-size: 0.9rem;
+    }
 }

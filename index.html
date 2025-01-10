@@ -1,56 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmer Management System</title>
+    <title>কৃষক ব্যবস্থাপনা সিস্টেম</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Farmer Management System</h1>
+        <h1>কৃষক ব্যবস্থাপনা সিস্টেম</h1>
         <div class="form-container">
-            <h2>Add Farmer</h2>
+            <h2>কৃষক যোগ করুন</h2>
             <form id="farmerForm">
-                <label for="name">Farmer Name</label>
-                <input type="text" id="name" required>
+                <label for="name">নাম</label>
+                <input type="text" id="name" placeholder="নাম লিখুন" required>
 
-                <label for="address">Address</label>
-                <input type="text" id="address" required>
+                <label for="father">পিতার নাম</label>
+                <input type="text" id="father" placeholder="পিতার নাম লিখুন" required>
 
-                <label for="mobile">Mobile No.</label>
-                <input type="text" id="mobile" required>
+                <label for="mother">মাতার নাম</label>
+                <input type="text" id="mother" placeholder="মাতার নাম লিখুন" required>
 
-                <label for="mother">Mother's Name</label>
-                <input type="text" id="mother" required>
+                <label for="address">ঠিকানা (গ্রাম, ব্লক, ইউনিয়ন)</label>
+                <input type="text" id="address" placeholder="ঠিকানা লিখুন" required>
 
-                <label for="father">Father's Name</label>
-                <input type="text" id="father" required>
+                <label for="voterid">ভোটার আইডি</label>
+                <input type="text" id="voterid" placeholder="ভোটার আইডি লিখুন" required>
 
-                <label for="voterid">Voter ID</label>
-                <input type="text" id="voterid" required>
+                <label for="project">প্রজেক্ট নাম</label>
+                <input type="text" id="project" placeholder="প্রজেক্ট নাম লিখুন" required>
 
-                <label for="project">Project Name</label>
-                <input type="text" id="project" required>
+                <label for="demo">ডেমো</label>
+                <input type="text" id="demo" placeholder="ডেমো লিখুন" required>
 
-                <label for="demo">Demo</label>
-                <input type="text" id="demo" required>
-
-                <button type="submit">Add Farmer</button>
+                <button type="submit">কৃষক যোগ করুন</button>
             </form>
         </div>
 
-        <div class="search-container">
-            <h2>Search Farmer</h2>
-            <input type="text" id="searchInput" placeholder="Search by name or mobile">
-            <button onclick="searchFarmer()">Search</button>
-            <div id="searchResult"></div>
+        <div class="navigation">
+            <a href="search.html">কৃষক অনুসন্ধান</a>
         </div>
 
         <div class="farmer-list">
-            <h2>Farmer List</h2>
+            <h2>কৃষকের তালিকা</h2>
             <ul id="farmerList"></ul>
         </div>
     </div>
