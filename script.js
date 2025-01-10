@@ -8,7 +8,7 @@ function displayFarmers() {
     
     farmers.forEach(farmer => {
         const li = document.createElement('li');
-        li.textContent = `${farmer.name} - ${farmer.mobile}`;
+        li.textContent = `${farmer.name} - ${farmer.voterid}`;
         farmerList.appendChild(li);
     });
 }
@@ -20,10 +20,9 @@ document.getElementById('farmerForm').addEventListener('submit', function(event)
     const farmer = {
         name: document.getElementById('name').value,
         address: document.getElementById('address').value,
-        mobile: document.getElementById('mobile').value,
+        voterid: document.getElementById('voterid').value,
         mother: document.getElementById('mother').value,
         father: document.getElementById('father').value,
-        voterid: document.getElementById('voterid').value,
         project: document.getElementById('project').value,
         demo: document.getElementById('demo').value,
     };
@@ -37,7 +36,7 @@ document.getElementById('farmerForm').addEventListener('submit', function(event)
     displayFarmers();
 });
 
-// Function to search for a farmer by name or mobile number
+// Function to search for a farmer by name or voter ID
 function searchFarmer() {
     const searchValue = document.getElementById('searchInput').value.toLowerCase();
     const resultContainer = document.getElementById('searchResult');
@@ -45,13 +44,13 @@ function searchFarmer() {
 
     const results = farmers.filter(farmer =>
         farmer.name.toLowerCase().includes(searchValue) || 
-        farmer.mobile.includes(searchValue)
+        farmer.voterid.includes(searchValue)
     );
 
     if (results.length > 0) {
         results.forEach(farmer => {
             const div = document.createElement('div');
-            div.textContent = `${farmer.name} - ${farmer.mobile}`;
+            div.textContent = `${farmer.name} - ${farmer.voterid}`;
             resultContainer.appendChild(div);
         });
     } else {

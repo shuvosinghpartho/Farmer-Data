@@ -1,12 +1,32 @@
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(120deg, #f6d365, #fda085);
-    color: #333;
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(120deg, #84fab0, #8fd3f4);
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.welcome img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+.welcome p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Container Styles */
 .container {
     max-width: 900px;
     margin: 50px auto;
@@ -78,19 +98,6 @@ button:active {
     transform: scale(0.98);
 }
 
-.navigation a {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #f093fb;
-    transition: color 0.3s ease;
-}
-
-.navigation a:hover {
-    color: #f5576c;
-}
-
 /* Farmer List Styles */
 .farmer-list ul {
     list-style: none;
@@ -110,6 +117,16 @@ button:active {
     background: #fef3c7;
 }
 
+/* Footer Styles */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -120,36 +137,6 @@ button:active {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Search Result Section */
-#searchResult {
-    margin-top: 15px;
-    padding: 10px;
-    background: #ffedd5;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.search-container input {
-    width: calc(100% - 100px);
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.search-container button {
-    width: 90px;
-    display: inline-block;
-}
-
-.search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.search-container button:hover {
-    background: linear-gradient(120deg, #f5576c, #f093fb);
 }
 
 /* Responsive Design */
