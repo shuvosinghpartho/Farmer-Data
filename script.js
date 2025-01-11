@@ -88,7 +88,3 @@ function deleteFarmer(index) {
 
 // Initial display of farmers
 displayFarmers();
-
-
-
-
