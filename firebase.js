@@ -22,4 +22,4 @@ function pushData(data) {
       console.error("Error pushing data:", error);
     });
 }
-export { pushData };
+
