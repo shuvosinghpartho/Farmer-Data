@@ -8,6 +8,64 @@
     font-weight: bold;
 }
 
+/* Navigation Button Styles */
+.navigation-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient for an attractive look */
+    border-radius: 30px; /* Rounded corners for a modern look */
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth hover transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Spacing from other elements */
+}
+
+.navigation-btn:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    background: linear-gradient(45deg, #feb47b, #ff7e5f); /* Inverse gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.navigation-btn:active {
+    transform: translateY(2px); /* Button press effect */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow when active */
+}
+
+/* No Farmers Found Message */
+.no-farmers-message {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #e74c3c; /* Red color for emphasis */
+    font-weight: bold;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #f1c40f, #e67e22); /* Gradient background */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Animation for No Farmers Found Message */
+.no-farmers-message.show {
+    animation: fadeInMessage 1s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeInMessage {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
 /* Welcome Section */
 .welcome {
     text-align: center;
@@ -37,6 +95,7 @@
     animation: fadeIn 1s ease-out;
 }
 
+/* Form Elements */
 h1, h2 {
     text-align: center;
     color: #444;
@@ -59,7 +118,8 @@ label {
     color: #555;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="tel"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -68,7 +128,8 @@ input[type="text"] {
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="tel"]:focus {
     box-shadow: 0 0 5px #ff8c42;
     border-color: #ff8c42;
     outline: none;
@@ -98,23 +159,64 @@ button:active {
     transform: scale(0.98);
 }
 
-/* Farmer List Styles */
-.farmer-list ul {
-    list-style: none;
-    padding: 0;
+/* Navigation Button Styles */
+.search-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 15px; /* Added gap between buttons */
 }
 
-.farmer-list li {
+.search-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.search-btn:active {
+    transform: translateY(2px);
+}
+
+/* Farmer Information Card */
+#searchResult .farmer-card {
     background: #f9f9f9;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.farmer-list li:hover {
-    background: #fef3c7;
+#searchResult .farmer-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#searchResult .farmer-card .card-header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #444;
+}
+
+#searchResult .farmer-card .card-details {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+#searchResult .farmer-card .card-details .detail {
+    margin: 5px 0;
+}
+
+#searchResult .farmer-card .card-details .label {
+    font-weight: bold;
+    color: #444;
 }
 
 /* Footer Styles */
@@ -153,7 +255,46 @@ button:active {
         font-size: 1.5rem;
     }
 
-    input[type="text"], button {
+    input[type="text"], input[type="tel"], button {
         font-size: 0.9rem;
+    }
+
+    .search-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .navbar {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile First Optimization */
+@media (max-width: 480px) {
+    .navbar {
+        font-size: 1.3rem;
+        padding: 12px;
+    }
+
+    .welcome p {
+        font-size: 1.2rem;
+    }
+
+    input[type="text"], input[type="tel"], button {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .search-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .farmer-card {
+        padding: 15px;
     }
 }

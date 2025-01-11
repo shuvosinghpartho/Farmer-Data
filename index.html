@@ -38,6 +38,9 @@
                 <label for="voterid">ভোটার আইডি</label>
                 <input type="text" id="voterid" placeholder="ভোটার আইডি লিখুন" required>
 
+                <label for="mobile">মোবাইল নম্বর</label>
+                <input type="tel" id="mobile" placeholder="মোবাইল নম্বর লিখুন" pattern="[0-9]{11}" required>
+
                 <label for="project">প্রজেক্ট নাম</label>
                 <input type="text" id="project" placeholder="প্রজেক্ট নাম লিখুন" required>
 
@@ -49,19 +52,25 @@
         </div>
 
         <div class="navigation">
-            <a href="search.html">কৃষক অনুসন্ধান</a>
+            <a href="search.html" class="search-btn">কৃষক অনুসন্ধান</a>
         </div>
 
         <div class="farmer-list">
             <h2>কৃষকের তালিকা</h2>
-            <ul id="farmerList"></ul>
+            <ul id="farmerList">
+    <li>
+        <!-- List content here -->
+        <a href="#" class="delete-btn">❌</a> <!-- Delete Button with a small cross symbol -->
+    </li>
+</ul>
+
         </div>
-    </div>
+        
+        
 
     <footer class="footer">
         <p>📜 সকল অধিকার সংরক্ষিত &copy; ২০২৫ | কৃষি ব্যবস্থাপনা সিস্টেম<br />
             Developed By Shuvo Singh Partho</p>
-        <!-- <p>&copy; 2025 আমিও ডাক্তার হব!. All Rights Reserved. -->
     </footer>
 
     <script src="script.js"></script>
