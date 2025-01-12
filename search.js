@@ -17,7 +17,5 @@ function populateCard(data) {
     document.getElementById("voter-id").textContent = data.voterid;
     document.getElementById("project").textContent = data.project;
     document.getElementById("demo").textContent = data.demo;
-
-    // Make the card visible
     document.getElementById("result-card").style.display = "block";
 }
