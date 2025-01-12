@@ -22,7 +22,7 @@
     <div class="container">
         <div class="form-container">
             <h2>কৃষক যোগ করুন</h2>
-            <form id="farmerForm">
+            <form id="farmerForm" action="#">
                 <label for="name">নাম</label>
                 <input type="text" id="name" placeholder="নাম লিখুন" required>
 
@@ -39,7 +39,7 @@
                 <input type="text" id="voterid" placeholder="ভোটার আইডি লিখুন" required>
 
                 <label for="mobile">মোবাইল নম্বর</label>
-                <input type="tel" id="mobile" placeholder="মোবাইল নম্বর লিখুন" pattern="[0-9]{11}" required>
+                <input type="tel" id="mobile" placeholder="মোবাইল নম্বর লিখুন"  required>
 
                 <label for="project">প্রজেক্ট নাম</label>
                 <input type="text" id="project" placeholder="প্রজেক্ট নাম লিখুন" required>
@@ -47,7 +47,7 @@
                 <label for="demo">ডেমো</label>
                 <input type="text" id="demo" placeholder="ডেমো লিখুন" required>
 
-                <button type="submit">কৃষক যোগ করুন</button>
+                <button id="addBtn" type="button">কৃষক যোগ করুন</button>
             </form>
         </div>
 
@@ -64,7 +64,7 @@
     </li>
 </ul>
 
-        </div>
+        </div></div>
         
         
 
@@ -72,7 +72,11 @@
         <p>📜 সকল অধিকার সংরক্ষিত &copy; ২০২৫ | কৃষি ব্যবস্থাপনা সিস্টেম<br />
             Developed By Shuvo Singh Partho</p>
     </footer>
+<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
 
+
+    <script src="firebaseHelper.js"></script>
     <script src="script.js"></script>
 </body>
 

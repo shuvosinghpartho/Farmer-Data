@@ -298,3 +298,89 @@ button:active {
         padding: 15px;
     }
 }
+/*For new Card */
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4e5d6c; /* Dark blue-gray color */
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.card-item label {
+    font-weight: bold;
+    width: 160px;
+    color: #5f6d7a; /* Soft dark gray for labels */
+    font-size: 16px;
+}
+
+.card-item span {
+    color: #3b444b; /* Dark grayish text for values */
+    font-size: 16px;
+    word-break: break-word;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 25px;
+    }
+
+    .card-item label {
+        width: 120px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card-item label {
+        width: 100px;
+        font-size: 14px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-item span {
+        font-size: 14px;
+    }
+}
+
