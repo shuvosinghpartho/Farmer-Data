@@ -17,11 +17,12 @@ function pushData(data) {
   newRef
     .set(data)
     .then(() => {
-      console.log("Data pushed successfully with key:", newRef.key);
-        myToast.show('Hello, this is a toast message!');
+      console.log("Data pushed successfully");
+      alert("upload successfully!")
     })
     .catch((error) => {
       console.error("Error pushing data:", error);
+        alert("upload Error!")
     });
 }
 function getData(){
