@@ -136,9 +136,3 @@ function deleteFarmer(index) {
   localStorage.setItem("farmers", JSON.stringify(farmers)); // Update localStorage
   displayFarmers(); // Refresh the list
 }
-
-<<<<<<< HEAD
-// Initial display of farmers
-displayFarmers();
-=======
->>>>>>> a9c0d9b21739c5f31a483fa473f78be5395d9cd4
