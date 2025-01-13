@@ -16,11 +16,49 @@
     <div class="container">
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="নাম বা মোবাইল নম্বর দিয়ে অনুসন্ধান করুন">
-            <button onclick="searchFarmer()">অনুসন্ধান</button>
+            <button id="searchBtn">অনুসন্ধান</button>
         </div>
 
         <div class="search-result" id="searchResult">
             <!-- Farmer's Info Card will be shown here -->
+            <div id="result-card" class="card" style="display: none;">
+                <h2 class="card-title">অনুসন্ধানের ফলাফল</h2>
+                <div class="card-content">
+                    <div class="card-item">
+                        <label>নাম:</label>
+                        <span id="name"></span>
+                    </div>
+                    <div class="card-item">
+                        <label>পিতার নাম:</label>
+                        <span id="father-name"></span>
+                    </div>
+                    <div class="card-item">
+                        <label>মাতার নাম:</label>
+                        <span id="mother-name"></span>
+                    </div>
+                    <div class="card-item">
+                        <label>ঠিকানা:</label>
+                        <span id="address"></span>
+                    </div>
+                    <div class="card-item">
+                        <label>মোবাইল নাম্বার:</label>
+                        <span id="mobile"></span>
+                    </div>
+                    <div class="card-item">
+                        <label>ভোটার আইডি:</label>
+                        <span id="voter-id"></span>
+                    </div>
+                    <div class="card-item">
+                        <label>প্রজেক্ট নাম:</label>
+                        <span id="project"></span>
+                    </div>
+                    <div class="card-item">
+                        <label>ডেমো:</label>
+                        <span id="demo"></span>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <div class="navigation">
@@ -31,8 +69,11 @@
     <footer class="footer">
         <p>📜 সকল অধিকার সংরক্ষিত &copy; ২০২৫ | কৃষি ব্যবস্থাপনা সিস্টেম</p>
     </footer>
-
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database-compat.js"></script>
+    <script src="firebaseHelper.js"></script>
     <script src="script.js"></script>
+    <script src="search.js"></script>
 </body>
 
 </html>
